@@ -61,6 +61,25 @@ Or simply run the `TwilioSmsApplication.java` file from your IDE (VS Code, Intel
 SMS sent successfully! SID: SMxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
+## Local Development
+
+To run the application locally:
+
+1.  **Configure Environment Variables**:
+    Open the `.env` file in the project root and fill in your credentials:
+    ```properties
+    TWILIO_ACCOUNT_SID=your_actual_sid
+    TWILIO_AUTH_TOKEN=your_actual_token
+    TWILIO_PHONE_NUMBER=+1234567890
+    ```
+    *Note: The `.env` file is git-ignored to keep your secrets safe.*
+
+2.  **Run the Application**:
+    ```bash
+    mvn spring-boot:run
+    ```
+    The application will automatically load variables from `.env`.
+
 ## Testing
 
 A PowerShell script is included to quickly test the service.

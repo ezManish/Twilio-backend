@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: twilio-sms-service
+    runtime: docker
+    envVars:
+      - key: TWILIO_ACCOUNT_SID
+        sync: false
+      - key: TWILIO_AUTH_TOKEN
+        sync: false
+      - key: TWILIO_PHONE_NUMBER
+        sync: false
+      - key: PORT
+        value: 8080
